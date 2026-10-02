@@ -1,22 +1,29 @@
+import ModelView from "@/components/ModelView";
+import { models } from "@/data/models";
+
 function Work() {
   return (
-    <main>
-      <h1>WORK</h1>
+    <main className="px-6 py-20">
+      <header className="mx-auto mb-16 max-w-6xl">
+        <p className="mb-3 text-sm uppercase tracking-[0.3em] text-accent">
+          Selected work
+        </p>
 
-      <div>
-        {/* 3D model goes here */}
-        <div className="model-viewer">
-          {/* React Three Fiber canvas later */}
-        </div>
+        <h1 className="text-5xl font-semibold tracking-tight text-white sm:text-6xl">
+          3D Gallery
+        </h1>
 
-        <div>
-          <h2>Golden Donut</h2>
+        <p className="mt-5 max-w-xl text-white/50">
+          A collection of 3D experiments created in Blender and brought to life
+          on the web.
+        </p>
+      </header>
 
-          <p>
-            A 3D golden donut with a simple gold material and glossy finish.
-          </p>
-        </div>
-      </div>
+      <section className="mx-auto max-w-6xl space-y-24">
+        {models.map((model) => (
+          <ModelView key={model.title} model={model} />
+        ))}
+      </section>
     </main>
   );
 }
