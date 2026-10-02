@@ -17,10 +17,10 @@ export type Model = {
 
 export const models: Model[] = [
   {
-    title: "Golden Donut",
+    title: "Golden Ring",
     description:
-      "A simple golden donut created in Blender using a mesh cylinder. I shaped the form by cutting through the centre and added a gradient gold material with a glossy finish.",
-    modelPath: "/models/golden-donut.glb",
+      "A simple golden ring created in Blender using a mesh cylinder. I shaped the form by cutting through the centre and added a gradient gold material with a glossy finish.",
+    modelPath: "/models/golden-ring.glb",
     environment: "studio",
   },
   //   {

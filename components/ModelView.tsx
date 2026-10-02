@@ -1,7 +1,7 @@
 "use client";
 
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, useGLTF, Environment } from "@react-three/drei";
+import { OrbitControls, useGLTF, Environment, Float } from "@react-three/drei";
 import { Model } from "@/data/models";
 
 type ModelViewProps = {
@@ -21,7 +21,9 @@ export default function ModelView({ model }: ModelViewProps) {
         <Canvas>
           <Environment preset={model.environment} background />
           <ambientLight intensity={3} />
-          <ModelObject model={model} />
+          <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
+            <ModelObject model={model} />
+          </Float>
 
           <OrbitControls />
         </Canvas>
