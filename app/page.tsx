@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 export default function Home() {
   return (
@@ -19,9 +20,13 @@ export default function Home() {
 
         <Link
           href="/work"
-          className="mt-10 border border-accent px-6 py-3 text-sm tracking-wide text-foreground transition-colors hover:bg-accent hover:text-white"
+          className="group mt-10 inline-flex items-center gap-2 border border-accent px-6 py-3 text-sm tracking-wide text-foreground transition-colors hover:bg-accent hover:text-white"
         >
           EXPLORE WORK
+          <ArrowUpRight
+            size={18}
+            className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+          />
         </Link>
       </section>
     </main>
