@@ -23,10 +23,11 @@ export const models: Model[] = [
     modelPath: "/models/golden-ring.glb",
     environment: "studio",
   },
-  //   {
-  //     title: "Coffee on a table",
-  //     description:
-  //       "Just a coffee on a table. I used a cylinder to build the cup and saucer, and a torus for the handle. For the smoke, I used a Bezier curve with a simple animation.",
-  //     model: "/models/coffee-table.glb",
-  //   },
+  {
+    title: "Coffee on a table",
+    description:
+      "Just a coffee on a table. I used a cylinder to build the cup and saucer, and a torus for the handle. For the smoke, I used a Bezier curve with a simple animation.",
+    modelPath: "/models/coffee-mug.glb",
+    environment: "sunset",
+  },
 ];

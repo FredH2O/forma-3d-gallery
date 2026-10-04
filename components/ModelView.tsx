@@ -1,15 +1,27 @@
 "use client";
 
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, useGLTF, Environment, Float } from "@react-three/drei";
+import {
+  OrbitControls,
+  useGLTF,
+  useAnimations,
+  Environment,
+  Float,
+} from "@react-three/drei";
 import { Model } from "@/data/models";
+import { useEffect } from "react";
 
 type ModelViewProps = {
   model: Model;
 };
 
 function ModelObject({ model }: ModelViewProps) {
-  const { scene } = useGLTF(model.modelPath);
+  const { scene, animations } = useGLTF(model.modelPath);
+  const { actions } = useAnimations(animations, scene);
+
+  useEffect(() => {
+    Object.values(actions).forEach((action) => action?.reset().play());
+  }, [actions]);
 
   return <primitive object={scene} />;
 }
